@@ -18,7 +18,6 @@ struct Article: Decodable{
     let image_url: String
 }
 
-var refresher : UIRefreshControl!
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
@@ -30,28 +29,33 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        articlesTV.rowHeight = UITableViewAutomaticDimension
         fetchJSON ()
+        articlesTV.rowHeight = UITableViewAutomaticDimension
+       
         
         articlesTV.delegate = self
         articlesTV.dataSource = self
         
-        articlesTV.estimatedRowHeight = 50
-        articlesTV.rowHeight = UITableViewAutomaticDimension
+//        articlesTV.estimatedRowHeight = 50
+//        articlesTV.rowHeight = UITableViewAutomaticDimension
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return articles.count
+        // -1 for the empty cell, hence: I should check for how many cells are empty and subtract it.
+        return articles.count - 1
+    }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 //        let cell = articlesTV.dequeueReusableCell(withIdentifier: "cell")
-        let cell = UITableViewCell(style: .default, reuseIdentifier: nil)
-        cell.textLabel?.text = articles[indexPath.row].title
-        cell.detailTextLabel?.text = articles[indexPath.row].content
+        let cell = tableView.dequeueReusableCell(withIdentifier: "customCell") as! CustomTableViewCell
+        cell.titleLbl.text = articles[indexPath.row].title
+        cell.contentLbl.text = articles[indexPath.row].content
         cell.imageView?.downloadedFrom(link: articles[indexPath.row].image_url)
-        cell.textLabel?.numberOfLines = 0
+        cell.titleLbl.numberOfLines = 0
+        cell.contentLbl.numberOfLines = 0
         return cell
     }
     

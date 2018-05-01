@@ -37,15 +37,17 @@ class ArticleViewController: UIViewController {
 
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var titleView: UILabel!
-    @IBOutlet weak var descriptionView: UILabel!
+//    @IBOutlet weak var descriptionView: UILabel!
+    @IBOutlet weak var textView: UITextView!
     
     var art: Article?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        titleView.numberOfLines = 0
         
         titleView.text = art?.title
-        descriptionView.text = art?.content
+        textView.text = art?.content
         let urlString = (art?.image_url)!
         let url = URL(string: urlString)
         imageView.downloadedFrom(url: url!)
