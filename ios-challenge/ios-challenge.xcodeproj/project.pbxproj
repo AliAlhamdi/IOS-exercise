@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		41B9FF0720975CDC002EF488 /* ArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B9FF0620975CDC002EF488 /* ArticleViewController.swift */; };
 		41FF9A952094D16B00CAD992 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41FF9A942094D16B00CAD992 /* AppDelegate.swift */; };
 		41FF9A972094D16B00CAD992 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41FF9A962094D16B00CAD992 /* ViewController.swift */; };
 		41FF9A9A2094D16B00CAD992 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41FF9A982094D16B00CAD992 /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		41B9FF0620975CDC002EF488 /* ArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewController.swift; sourceTree = "<group>"; };
 		41FF9A912094D16B00CAD992 /* ios-challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		41FF9A942094D16B00CAD992 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		41FF9A962094D16B00CAD992 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -56,6 +58,7 @@
 			children = (
 				41FF9A942094D16B00CAD992 /* AppDelegate.swift */,
 				41FF9A962094D16B00CAD992 /* ViewController.swift */,
+				41B9FF0620975CDC002EF488 /* ArticleViewController.swift */,
 				41FF9A982094D16B00CAD992 /* Main.storyboard */,
 				41FF9A9B2094D16D00CAD992 /* Assets.xcassets */,
 				41FF9A9D2094D16D00CAD992 /* LaunchScreen.storyboard */,
@@ -136,6 +139,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				41FF9A972094D16B00CAD992 /* ViewController.swift in Sources */,
+				41B9FF0720975CDC002EF488 /* ArticleViewController.swift in Sources */,
 				41FF9A952094D16B00CAD992 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
